@@ -1,0 +1,249 @@
+/* ============== GLOBALS ======================== */
+:root {
+  --accent-color: #ff5d5d;
+  --dark-gray: #333;
+  --light-gray: #f2f2f2;
+  --gray: #545454;
+  --transparent: rgba(0, 0, 0, 0.7);
+}
+body {
+  font-family: Ts-Reg, sans-serif;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2 {
+  font-weight: bold;
+  font-family: TS-Med, sans-serif;
+}
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: calc(1024px - 40px);
+}
+
+p {
+  line-height: 1.2;
+}
+
+/* ============== HEADER ======================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  img {
+    display: inline-block;
+    width: 190px;
+  }
+  nav {
+    display: inline-block;
+  }
+  ul {
+    display: flex;
+    place-items: center;
+
+    i {
+      margin-inline-end: 5px;
+    }
+
+    li {
+      padding: 8px 10px;
+      margin-inline-start: 10px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    li:hover {
+      background-color: var(--light-gray);
+    }
+    li:has(button) {
+      background-color: #000;
+    }
+    button {
+      display: flex;
+      color: #fff;
+      font-weight: bold;
+    }
+    li:has(button):hover {
+      background-color: var(--transparent);
+    }
+  }
+}
+
+/* ============== MAIN ======================== */
+
+h1 {
+  padding-block-start: 20px;
+
+  span {
+    color: var(--accent-color);
+  }
+}
+.baseline {
+  margin-block-start: 10px;
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+/* ============== NAV SECONDARY ======================== */
+.nav-secondary {
+  margin-block-start: 30px;
+
+  ul {
+    display: flex;
+
+    gap: 10px;
+
+    li {
+      flex: 1;
+    }
+
+    a {
+      display: flex;
+      padding: 12px 15px;
+      justify-content: space-between;
+      gap: 10px;
+      border: 1px solid black;
+      border-radius: 12px;
+      height: 100%;
+    }
+
+    a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+/* ============== IMAGES ======================== */
+
+.images {
+  display: flex;
+  margin-block-start: 30px;
+  height: 430px;
+  gap: 2px;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .col-1 {
+    width: 50%;
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    width: 50%;
+
+    a {
+      flex: 1;
+      height: 50%;
+    }
+  }
+  a:hover img {
+    opacity: 0.7;
+  }
+}
+
+/* ============== SMALL NAV ======================== */
+.nav-three {
+  display: flex;
+  margin-block-start: 20px;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.nav-three ul {
+  display: flex;
+  gap: 5px;
+  i {
+    margin-inline-start: 5px;
+    font-size: 10px;
+  }
+
+  li:hover {
+    text-decoration: underline;
+    color: var(--gray);
+  }
+}
+
+/* ============== DESCRIPTION ======================== */
+
+.description {
+  display: flex;
+  margin-block: 40px;
+  .col-2 {
+    flex: 2;
+  }
+  .col-1 {
+    flex: 3;
+  }
+
+  .col-1 p {
+    margin-block-start: 30px;
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: var(--dark-gray);
+    max-width: 45ch;
+  }
+
+  .col-2 {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .top {
+    background-color: var(--accent-color);
+    padding: 30px;
+
+    p {
+      margin-block-start: 30px;
+    }
+
+    button {
+      margin-block-start: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: var(--transparent);
+    }
+  }
+  .bottom {
+    height: 200px;
+    background: center / cover no-repeat url(../img/image_trips_card_medium.png);
+  }
+}
