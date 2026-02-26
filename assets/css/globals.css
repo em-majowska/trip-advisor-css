@@ -53,6 +53,7 @@ h2 {
 h3 {
   font-size: 32px;
   font-weight: bold;
+  margin-block-end: 30px;
 }
 
 .container {

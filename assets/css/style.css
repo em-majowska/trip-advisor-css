@@ -2,18 +2,22 @@
 @import "./header.css";
 @import "./footer.css";
 
-main {
-  padding-block-start: 60px;
-}
-h1 {
-  padding-block-start: 20px;
+/* HEADER                     */
 
+main {
+  padding-block-start: 80px;
+}
+
+h1 {
+  margin-block-end: 5px;
   span {
     color: var(--accent-color);
   }
 }
+
 .baseline {
-  margin-block-start: 10px;
+  margin-block-end: 30px;
+
   font-size: 14px;
   color: var(--dark-gray);
 
@@ -24,7 +28,7 @@ h1 {
 
 /* ============== NAV SECONDARY ======================== */
 .nav-secondary {
-  margin-block-start: 30px;
+  margin-block-end: 30px;
   font-weight: bold;
 
   ul {
@@ -59,10 +63,10 @@ h1 {
 
 .images {
   display: flex;
-  margin-block-start: 30px;
   height: 430px;
   gap: 2px;
   overflow: hidden;
+  margin-block-end: 20px;
 
   img {
     height: 100%;
@@ -94,9 +98,9 @@ h1 {
 /* ============== SMALL NAV ======================== */
 .nav-three {
   display: flex;
-  margin-block-start: 20px;
   justify-content: space-between;
   font-size: 12px;
+  margin-block-end: 40px;
 }
 
 .nav-three ul {
@@ -117,7 +121,7 @@ h1 {
 
 .description {
   display: flex;
-  margin-block: 40px;
+  margin-block-end: 80px;
 
   .col-2 {
     flex: 2;
@@ -128,27 +132,26 @@ h1 {
   }
 
   .col-1 p {
+    max-width: 45ch;
     font-size: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
     color: var(--dark-gray);
-    max-width: 45ch;
   }
 
   .col-2 {
     border-radius: 15px;
     overflow: hidden;
+
+    p {
+      margin-block-end: 30px;
+    }
   }
 
   .top {
     background-color: var(--accent-color);
     padding: 30px;
 
-    p {
-      margin-block-start: 30px;
-    }
-
     button {
-      margin-block-start: 30px;
       padding: 20px;
       border-radius: 15px;
       background-color: #000;
@@ -169,16 +172,13 @@ h1 {
 
 /* ============== ATTRACTIONS ======================== */
 
-.recommendations {
-  margin-block-start: 50px;
+.attractions,
+.restaurants {
+  display: flex;
+  margin-block-end: 40px;
 
   h3 {
     font-size: 24px;
-  }
-  .attractions,
-  .restaurants {
-    display: flex;
-    margin-block-end: 40px;
   }
 
   h3 + p {
@@ -215,9 +215,11 @@ h1 {
       aspect-ratio: 4/3;
       object-fit: cover;
     }
-    .image {
+
+    .main-image {
       position: relative;
     }
+
     .heart {
       display: flex;
       align-items: center;
@@ -239,24 +241,32 @@ h1 {
       font-size: 18px;
       font-weight: bold;
     }
+
     .num,
     p {
       color: var(--dark-gray);
     }
+
     .num {
       font-size: 12px;
     }
+
     p {
       font-size: 14px;
     }
 
-    .rating .star {
-      display: inline-block;
-      margin-inline-end: 2px;
-      border-radius: 50%;
-      width: 12px;
-      height: 12px;
-      background-color: var(--green);
+    .rating {
+      display: flex;
+      align-items: center;
+
+      i {
+        color: var(--green);
+        font-size: 12px;
+      }
+
+      span {
+        margin-inline-start: 10px;
+      }
     }
   }
 
@@ -264,19 +274,23 @@ h1 {
     img {
       opacity: 0.7;
     }
+
     h4 {
       text-decoration: underline;
     }
   }
 }
 
+.restaurants {
+  margin-block-end: 100px;
+}
+
 /* ============== ARTICLES ======================== */
 
 .articles {
-  margin-block-start: 100px;
+  margin-block-end: 100px;
 
   .carousel {
-    margin-block-start: 40px;
     display: flex;
     gap: 20px;
     overflow: scroll;
