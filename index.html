@@ -10,8 +10,11 @@
 	<link rel="stylesheet" href="./assets/css/icons.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="stylesheet" href="./assets/css/media-queries.css">
+	<link rel="shortcut icon" href="./assets/img/favicon-tripadvisor.svg" type="image/x-icon">
 	<title>TripAdvisor</title>
 	<script src="https://kit.fontawesome.com/258ca14270.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+	<script defer src="./assets/js/script.js"></script>
 </head>
 
 <body>
@@ -26,7 +29,7 @@
 					<li class="nav-item"><a href="#" class="nav-link"><i class="icon-heart"></i><span>Voyage</span></a></li>
 					<li class="nav-item"><a href="#" class="nav-link"><i
 								class="icon-notification_bell"></i><span>Alertes</span></a></li>
-					<li class="nav-item"><button>Connectez-vous</button></li>
+					<li class="nav-item"><button class="login-btn">Connectez-vous</button></li>
 					<li class="nav-item mobile"><a href="#" class="nav-link"><i class="icon-search"></i></a></li>
 					<li class="nav-item mobile"><a href="#" class="nav-link"><i
 								class="icon-empty_cart"></i><span>Panier</span></a></li>
@@ -400,6 +403,21 @@
 		<p>Made at <a href="https://lereacteur.io">Le Reacteur</a> by <a href="https://github.com/em-majowska">Ewa
 				Majowska - 2026</a></p>
 	</footer>
+
+	<!-- MODAL -->
+	<div class="modal hidden">
+		<div class="modal-container">
+			<button class="close-btn" id="close-btn"><i class="icon-times"></i></button>
+			<h2>Formulaire de contact</h2>
+			<form id="contactForm">
+				<input type="text" name="firstName" id="firstName" placeholder="Prénom">
+				<input type="text" name="lastName" id="lastName" placeholder="Nom">
+				<input type="text" name="email" id="email" placeholder="Email">
+				<textarea name="content" id="content" placeholder="Écrivez ici votre message..." rows="7"></textarea>
+				<button id="submitBtn">Envoyer le formulaire</button>
+			</form>
+		</div>
+	</div>
 </body>
 
 </html>

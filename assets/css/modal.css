@@ -1,0 +1,78 @@
+.modal {
+  display: block;
+  position: fixed;
+  inset: 0 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.modal.hidden {
+  display: none;
+}
+
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 100px;
+  border-radius: 20px;
+  background-color: #fff;
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px;
+    color: var(--dark-gray);
+
+    i {
+      font-size: 28px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    input,
+    textarea {
+      width: 350px;
+      padding: 15px;
+      border: 2px solid #000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 0px;
+    }
+
+    textarea {
+      font-family: Ts-Reg, sans-serif;
+    }
+
+    button {
+      padding: var(--padding);
+      background-color: var(--green);
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

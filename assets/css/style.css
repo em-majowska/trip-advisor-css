@@ -1,9 +1,9 @@
 @import "./globals.css";
 @import "./header.css";
 @import "./footer.css";
+@import "./modal.css";
 
 /* HEADER */
-
 main {
   padding-block-start: 80px;
 }

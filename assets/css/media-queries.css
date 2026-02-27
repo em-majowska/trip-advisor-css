@@ -38,7 +38,8 @@
     }
 
     ul li {
-      width: calc((100% - 30px) / 4);
+      /* width: calc((100% - 30px) / 4); */
+      flex: 0 0 calc((100% - 30px) / 4);
     }
   }
 
