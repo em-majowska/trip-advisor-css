@@ -1,11 +1,22 @@
 const $ = document;
-const contactForm = $.querySelector("#contactForm");
 
 $.addEventListener("DOMContentLoaded", () => {
+  // add header border when scrolled
+  $.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 0) {
+      $.querySelector("header").classList.add("scrolled");
+    } else {
+      $.querySelector("header").classList.remove("scrolled");
+    }
+  });
+
   const loginBtn = $.querySelector(".login-btn");
   const closeModalBtn = $.querySelector(".close-btn");
   const modal = $.querySelector(".modal");
   const submitBtn = $.querySelector("#submitBtn");
+  const contactForm = $.querySelector("#contactForm");
 
   // open modal
   loginBtn.addEventListener("click", () => {
@@ -24,8 +35,7 @@ $.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // get form data
-
+  // check form validity
   for (let element of contactForm.elements) {
     element.addEventListener("change", () => {
       if (contactForm.checkValidity()) {
@@ -36,6 +46,7 @@ $.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // get form data
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     contactForm.reportValidity();

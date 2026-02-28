@@ -56,3 +56,6 @@ header {
     }
   }
 }
+header.scrolled {
+  border-block-end: 1px solid #d8d8d8;
+}
