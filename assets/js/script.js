@@ -12,6 +12,16 @@ $.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // interactive heart buttons
+  const hearts = $.querySelectorAll(".heart");
+  hearts.forEach((heart) => {
+    heart.addEventListener("click", () => {
+      heart.classList.toggle("clicked");
+      heart.firstChild.classList.toggle("icon-heart");
+      heart.firstChild.classList.toggle("icon-heart_fill");
+    });
+  });
+
   const loginBtn = $.querySelector(".login-btn");
   const closeModalBtn = $.querySelector(".close-btn");
   const modal = $.querySelector(".modal");
@@ -63,7 +73,10 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:3000/contact", body);
+      const response = await axios.post(
+        "https://lasandra-unsympathising-roxann.ngrok-free.dev/contact",
+        body,
+      );
       console.log(response.data);
       contactForm.reset();
       contactForm.querySelector("p").textContent =

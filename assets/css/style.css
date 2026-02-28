@@ -223,6 +223,10 @@ h1 {
       background-color: var(--light-gray);
     }
 
+    .heart.clicked {
+      color: red;
+    }
+
     .badge {
       position: absolute;
       bottom: 10px;
