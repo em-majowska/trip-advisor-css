@@ -1,9 +1,11 @@
 const $ = document;
+const contactForm = $.querySelector("#contactForm");
 
 $.addEventListener("DOMContentLoaded", () => {
   const loginBtn = $.querySelector(".login-btn");
   const closeModalBtn = $.querySelector(".close-btn");
   const modal = $.querySelector(".modal");
+  const submitBtn = $.querySelector("#submitBtn");
 
   // open modal
   loginBtn.addEventListener("click", () => {
@@ -14,19 +16,29 @@ $.addEventListener("DOMContentLoaded", () => {
   });
 
   // close modal
-
   closeModalBtn.addEventListener("click", (e) => {
     if (!modal.classList.contains("hidden")) {
       modal.classList.add("hidden");
       $.querySelector("body").classList.remove("stop-scrolling");
+      contactForm.reset();
     }
   });
 
   // get form data
-  const contactForm = $.querySelector("#contactForm");
+
+  for (let element of contactForm.elements) {
+    element.addEventListener("change", () => {
+      if (contactForm.checkValidity()) {
+        submitBtn.disabled = false;
+      } else {
+        submitBtn.disabled = true;
+      }
+    });
+  }
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    contactForm.reportValidity();
 
     const firstName = $.querySelector("#firstName").value;
     const lastName = $.querySelector("#lastName").value;

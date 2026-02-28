@@ -410,11 +410,11 @@
 			<button class="close-btn" id="close-btn"><i class="icon-times"></i></button>
 			<h2>Formulaire de contact</h2>
 			<form id="contactForm">
-				<input type="text" name="firstName" id="firstName" placeholder="Prénom">
-				<input type="text" name="lastName" id="lastName" placeholder="Nom">
-				<input type="text" name="email" id="email" placeholder="Email">
-				<textarea name="content" id="content" placeholder="Écrivez ici votre message..." rows="7"></textarea>
-				<button id="submitBtn">Envoyer le formulaire</button>
+				<input type="text" name="firstName" id="firstName" placeholder="Prénom" required>
+				<input type="text" name="lastName" id="lastName" placeholder="Nom" required>
+				<input type="email" name="email" id="email" placeholder="Email" required>
+				<textarea name="content" id="content" placeholder="Écrivez ici votre message..." rows="7" required></textarea>
+				<button id="submitBtn" disabled>Envoyer le formulaire</button>
 			</form>
 		</div>
 	</div>
